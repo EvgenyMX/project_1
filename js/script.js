@@ -1,23 +1,6 @@
 "use strict";
 
 const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?","");
-
-
-
-if (numberOfFilms > 0 && numberOfFilms < 10) {
-    alert("Просмотрено давольно мало фильмов");
-} else if (numberOfFilms >= 10 && numberOfFilms < 30) {
-    alert("Вы классический зритель");
-} else if (numberOfFilms >= 30){
-    alert("Вы киноман");
-} else if (numberOfFilms === 0 ){
-    alert("Как так?");
-} else if (numberOfFilms == ""){
-    alert("Введите данные");
-} else {
-    alert("Произошла ошибка");
-}
-
 const peronalMovieDB = {
 
     count: numberOfFilms,

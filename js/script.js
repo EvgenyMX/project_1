@@ -7,7 +7,7 @@ const peronalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privet: false
+    privat: false
 
 };
 
@@ -25,15 +25,35 @@ for(let i = 0; i < numberOfFilms; i++){
     
 }
 
-
 if (peronalMovieDB.count > 0 && peronalMovieDB.count < 10) {
     alert("Просмотрено давольно мало фильмов");
 } else if (peronalMovieDB.count >= 10 && peronalMovieDB.count < 30) {
     alert("Вы классический зритель");   
 } else if (peronalMovieDB.count >= 30) {
+    alert("Вы киноман");
 } else {
     alert("Произошла ошибка");
 }
 
+function writeYourGenres() { 
+    for ( let i = 0; i < 3; i++) {
+        const favoriteGenreText = `Ваш любимый жанр под номером ${i+1}`;
+        const favoriteGenre = prompt(favoriteGenreText);
+        peronalMovieDB.genres[i] = favoriteGenre;
+    }
+}
+writeYourGenres();
 
-console.log( peronalMovieDB );
+function showMyDB( p ) { 
+    if ( p === false) {
+        console.log( peronalMovieDB );
+    } else {
+        console.log( "Фильмы публичные" );
+    }
+
+}
+showMyDB( peronalMovieDB.privat );
+
+
+
+
